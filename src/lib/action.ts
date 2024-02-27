@@ -16,7 +16,7 @@ export async function whiteList(formData: FormData) {
   const email = formData.get("email");
 
   try {
-    await dbConnect();
+    dbConnect();
 
     const NewMember = new WaitList({
       email: email,
@@ -36,7 +36,7 @@ export async function RegisterUser(
   formData: FormData
 ) {
   try {
-    await dbConnect();
+    dbConnect();
 
     const { username, password, email, preference } =
       Object.fromEntries(formData);

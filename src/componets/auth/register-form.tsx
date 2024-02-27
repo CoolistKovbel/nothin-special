@@ -37,7 +37,7 @@ const RegisterForm = () => {
           type="text"
           id="username"
           name="username"
-          className="w-full px-4 py-2 rounded-md border border-gray-600 focus:outline-none focus:border-blue-400 text-black"
+          className="w-full  rounded-md border border-2 p-2  bg-[#111]"
         />
       </div>
 
@@ -49,7 +49,7 @@ const RegisterForm = () => {
           type="email"
           id="email"
           name="email"
-          className="w-full px-4 py-2 rounded-md border border-gray-600 focus:outline-none focus:border-blue-400 text-black"
+          className="w-full  rounded-md border border-2 p-2  bg-[#111]"
         />
       </div>
 
@@ -61,7 +61,7 @@ const RegisterForm = () => {
           type="password"
           id="password"
           name="password"
-          className="w-full px-4 py-2 rounded-md border border-gray-600 focus:outline-none focus:border-blue-400 text-black"
+          className="w-full  rounded-md border border-2 p-2  bg-[#111]"
         />
       </div>
 
@@ -76,7 +76,7 @@ const RegisterForm = () => {
         <select
           id="preference"
           name="preference"
-          className="w-full px-4 py-2 rounded-md border border-gray-600 focus:outline-none focus:border-blue-400 text-black"
+          className="w-full  rounded-md border border-2 p-2  bg-[#111]"
         >
           <option value="frontend">Frontend Development</option>
           <option value="backend">Backend Development</option>
