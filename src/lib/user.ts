@@ -1,11 +1,11 @@
 "use server";
 
 import { User } from "../models/User";
-import dbConnect from "./db";
+import { dbConnect } from "./db";
 
 export const getUserByEmail = async (email: any) => {
   try {
-    dbConnect();
+    await dbConnect();
 
     const user = await User.findOne({ email });
 
@@ -17,7 +17,7 @@ export const getUserByEmail = async (email: any) => {
 
 export const getUserById = async (id: any) => {
   try {
-    dbConnect();
+    await dbConnect();
 
     const user = await User.findOne({ _id: id });
 
