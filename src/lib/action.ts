@@ -3,14 +3,12 @@
 import { User } from "../models/User";
 import { WaitList } from "../models/WaitList";
 
-import dbConnect from "./db";
+import { dbConnect } from "./db";
 
 import { hash } from "bcryptjs";
-import { CreateBlogSchema, SendContactEmail} from "./schema";
+import { CreateBlogSchema, SendContactEmail } from "./schema";
 import { writeFile } from "fs/promises";
 import { sendMail } from "./mail";
-
-
 
 export async function whiteList(formData: FormData) {
   const email = formData.get("email");
@@ -36,7 +34,7 @@ export async function RegisterUser(
   formData: FormData
 ) {
   try {
-    dbConnect();
+    await dbConnect();
 
     const { username, password, email, preference } =
       Object.fromEntries(formData);
@@ -161,18 +159,14 @@ export async function ContactEmail(
 
 export async function authenticate(
   prevState: string | undefined,
-  formData: FormData,
+  formData: FormData
 ) {
-
-
   try {
+    console.log("hate my life");
 
-    console.log("hate my life")
-
-    return "success"
-    
+    return "success";
   } catch (error) {
-    console.log(error)
-    return "error dumbasds"
+    console.log(error);
+    return "error dumbasds";
   }
 }
